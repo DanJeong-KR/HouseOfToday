@@ -288,17 +288,10 @@
 									            <div class="row">
 															<ul>
 																<li>로그인이 되지 않으면 SNS 기능, 결제 기능등 서비스의 핵심 기능을 활성화 할 수 없는 만큼 가장 중요하다고 생각.</li>
-																<li>한번도 경험해보지 못한 Token이라는 개념을 사용해야 한다는 문제</li>
-																<li>사용자들은 번거로움을 제일 싫어하는 문제</li>
-																<ul>
-																	<li>소셜 로그인 기능을 추가해야 한다. 가장 이용자 수가 많은 카카오, 구글, 네이버를 추가하자.</li>
-																	<ul>
-																		<li>카카오, 구글, 네이버등 소셜 로그인은 회사마다 SDK가 모두 다르며 카카오와 네이버에서 제공하는 예제코드는 iOS9 버전이다. </li>
-																		<ul>
-																			<li>3사의 SDK 문서를 탐독하여 3사 모두 로그인 기능은 <strong>고유 id값을 제공한다는 것에 착안하여 서버 개발자와 협의해서 id를 서버에 저장하고 오늘의 집 Token을 발행하도록 구현해서 문제 해결</strong>  </li>
-																		</ul>
-																	</ul>
-																</ul>
+																<li>한번도 경험해보지 못한 Token이라는 개념을 사용해야 한다는 문제.</li>
+																<li>다른 팀들이 하지 않는 소셜로그인을 구현하는 것이기 떄문에 팀원들을 설득해야 하는 문제.</li>
+																<li>모바일 사용자들은 번거로움을 제일 싫어한다는 의견을 팀원들에게 피력하고 소셜로그인의 필요성 설득.</li>
+																<li>소셜 로그인을 구현한다 하더라도 카카오, 구글, 네이버등 소셜 로그인은 회사마다 SDK가 모두 다르며 카카오와 네이버에서 제공하는 예제코드는 모두 옛날 버전.</li>
 															</ul>
 										      	</div>
 									         </div>
@@ -309,7 +302,7 @@
 									    <div class="panel-heading" role="tab" id="headingSix">
 									        <h4 class="panel-title">
 									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-																로그인 문제 해결!
+																Backend 팀원과 1:1로 로그인 기능에 집중함으로써 3사 소셜로그인 모두 구현하고 문제 해결!
 									            </a>
 									        </h4>
 									    </div>
@@ -317,6 +310,7 @@
 									       <div class="panel-body">
 									          <div class="row">
 															<ul>
+																<li>3사의 SDK 문서를 탐독하여 3사 모두 로그인 기능은 <strong>고유 id값을 제공한다는 것에 착안하여 서버 개발자와 협의해서 id를 서버에 저장하고 오늘의 집 Token을 발행하도록 구현해서 문제 해결</strong>
 																<li><img src="images/problem/token.png" alt="My Image" width="700"></li>
 																<li><img src="images/problem/login.gif" alt="My Image" width="700"></li>
 															</ul>
@@ -342,10 +336,7 @@
 																<img src="images/problem/home.png" alt="My Image" width="250">
 																<img src="images/problem/store.png" alt="My Image" width="250">
 																<img src="images/problem/my.png" alt="My Image" width="250">
-																<hr>
-																<ul>
-																	<li>Custom UI를 <strong>오픈소스처럼 추상화 시켜서 어디든 재사용 될 수 있게 구현함으로써 문제 해결</strong></li>
-																</ul>
+
 										      		</div>
 									         </div>
 									    </div>
@@ -355,15 +346,16 @@
 									    <div class="panel-heading" role="tab" id="headingSeven">
 									        <h4 class="panel-title">
 									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-																Custom UI 문제 해결!
+																Custom UI를 재사용을 위해 추상화 시킴으로써 문제 해결!
 									            </a>
 									        </h4>
 									    </div>
 									    <div id="collapseSeven" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSeven">
 									         <div class="panel-body">
 									          	<div class="row">
-																<img src="images/problem/customUI.gif" alt="My Image" width="300">
 																<ul>
+																	<li>Custom UI를 <strong>오픈소스처럼 추상화 시켜서 어디든 재사용 될 수 있게 구현함으로써 문제 해결</strong></li>
+																	<li><img src="images/problem/customUI.gif" alt="My Image" width="300"></li>
 																	<li>구현한 CustomUI를 실제로 오픈소스로 확장시켜서 Github에 배포.</li>
 																</ul>
 																<a href="https://github.com/changSic/CustomCategoryTabBar"><img src="images/problem/customUIGithub.png" width="700"></a>
@@ -384,7 +376,7 @@
 									         <div class="panel-body">
 									            <div class="row">
 															<ul>
-																<li>서버와 통신하는 메소드를 구현할 때는 Backend 팀이 작성헌 API 문서를 참고해 구현하게 되는데 해당 문서에 request content-type 은 application/json 으로 명시되어 있었음.</li>
+																<li>서버와 통신하는 메소드를 구현할 때는 Backend 팀이 작성헌 API 문서를 참고해 구현하게 되는데 해당 문서에 request content-type 은 <strong>application/json 으로 명시</strong>되어 있었음.</li>
 																<li><img src="images/problem/requestJson.png" alt="My Image" width="500"></li>
 																<li>하지만 HTTP Response Status Code 500번 에러가 계속 발생!</li>
 															</ul>
@@ -399,7 +391,7 @@
 									    <div class="panel-heading" role="tab" id="headingEight">
 									        <h4 class="panel-title">
 									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-																Networking 문제 해결!
+																Backend 팀원들과 문제점 파악 후 Content Type을 수정함으로써 문제 해결!
 									            </a>
 									        </h4>
 									    </div>
@@ -407,8 +399,8 @@
 									         <div class="panel-body">
 									            <div class="row">
 															<ul>
-																<li>Content Type을 application/x-www-form-urlencoded로 변경해 주고 </li>
-																<li>x-www-form-urlencoded은 json의 key:value 와는 다르게 key-value&key=value와 같이 query문으로 body를 작성해야 하기 때문에 </li>
+																<li>Content Type을 <strong>application/x-www-form-urlencoded</strong>로 변경해 주고 </li>
+																<li>x-www-form-urlencoded은 json의 key:value 와는 다르게 <strong>key-value&key=value와 같이 query문으로 body를 작성</strong>해야 하기 때문에 </li>
 																<li>query문으로 변환하는 메소드를 만든 후 적용한 후 문제 해결! </li>
 																<li><img src="images/problem/request_query.png" alt="My Image" width="500"></li>
 																<li><img src="images/problem/requestOtherType.png" alt="My Image" width="500"></li>
@@ -437,7 +429,6 @@
 																<li>`오늘의 집` 앱의 View 개수는 50개 이상으로 모든 팀의 프로젝트 중 가장 큰 규모.</li>
 																<li>프로젝트 기간 안에 완성하지 못할 가능성.</li>
 																<li>효율성을 높이지 않으면 완성하지 못한다고 생각</li>
-																<li><strong>Extension과 Helper Method를 적극 활용해서 재사용되는 코드를 최대한 줄임으로써 시간과 효율성 문제 해결!</strong></li>
 															</ul>
 
 
@@ -446,14 +437,14 @@
 									    </div>
 									</div>
 									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingFour">
+									    <div class="panel-heading" role="tab" id="headingNine">
 									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-																효율성 문제 해결!
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+																Extension과 Helper Method를 적극 활용해서 재사용되는 코드를 최대한 줄임으로써 시간과 효율성 문제 해결!
 									            </a>
 									        </h4>
 									    </div>
-									    <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+									    <div id="collapseNine" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingNine">
 									         <div class="panel-body">
 									            <div class="row">
 															<ul>
@@ -463,7 +454,7 @@
 																<li>사용자에게 주의를 주는 alert를 extension을 통해 구현함으로써 재사용성과 효율성을 높임.</li>
 																<li><img src="images/problem/extension_alert.png" alt="My Image" width="500"></li>
 																<li>더 확장시켜서 유용한 extension과 helper method를 정리하는 마인드맵으로 정리하는 CleanHelper 프로젝트 Github 배포.</li>
-																<li><img src="images/problem/extension_cleanHelper.png" alt="My Image"></li>
+																<li><img src="images/problem/extension_cleanHelper.png" alt="My Image" width="500"></li>
 															</ul>
 
 
@@ -477,7 +468,7 @@
 									    <div class="panel-heading" role="tab" id="headingFive">
 									        <h4 class="panel-title">
 									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-																의사소통 문제
+																팀원들 간의 의사소통 문제
 									            </a>
 									        </h4>
 									    </div>
@@ -485,8 +476,33 @@
 									         <div class="panel-body">
 									            <div class="row">
 															<ul>
-																<li>로그인이 되지 않으면 어떠한 서비스도 활성화 되지 않는 만큼 가장 중요하다고 생각.</li>
+																<li>전체 팀 회의 때마다 Frontend, Backend, iOS 서로 어떤 일을 하는지 잘 모르기 때문에 회의 시간이 무의미해지고 의사소통에서 오해가 발생.</li>
+																<li>iOS 팀원들 간에도 협업의 경험이 없기 때문에 분업을 하는 중에 의사소통 문제 발생.</li>
 															</ul>
+
+
+										      	</div>
+									         </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTen">
+									        <h4 class="panel-title">
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+																Trello를 적극 활용하고 코드리뷰와 Commit Message 규칙을 작성하는 등의 노력으로 의사소통 문제 해결!
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTen" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTen">
+									         <div class="panel-body">
+									            <div class="row">
+																<ul>
+																	<li><strong>Trello를 활용해서 Team의 공지사항과 방향성을 기록하는 Board와 서로 어떤일을 하고 있는지 기록하는 Board를 관리함으로써 해결!</strong> </li>
+																	<li><a href="https://trello.com/b/KkgEWZOq"><img src="images/problem/trello_big.png" width="700"></a></li>
+																	<li><a href="https://trello.com/b/AZbLTdbp"><img src="images/problem/trello_detail.png" width="700"></a></li>
+																	<li><strong>매일 점심 전 11시 30분에 30분간 코드리뷰를 진행하고 Commit Message 규칙을 정하는 노력을 통해 해결! </strong></li>
+																	<li><img src="images/problem/commit.png" width="700"></li>
+																</ul>
 
 
 										      	</div>
