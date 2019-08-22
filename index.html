@@ -376,7 +376,7 @@
 									    <div class="panel-heading" role="tab" id="headingThree">
 									        <h4 class="panel-title">
 									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-																Networking 문제
+																서버와의 Networking 문제
 									            </a>
 									        </h4>
 									    </div>
@@ -384,8 +384,37 @@
 									         <div class="panel-body">
 									            <div class="row">
 															<ul>
-																<li>로그인이 되지 않으면 어떠한 서비스도 활성화 되지 않는 만큼 가장 중요하다고 생각.</li>
+																<li>서버와 통신하는 메소드를 구현할 때는 Backend 팀이 작성헌 API 문서를 참고해 구현하게 되는데 해당 문서에 request content-type 은 application/json 으로 명시되어 있었음.</li>
+																<li><img src="images/problem/requestJson.png" alt="My Image" width="500"></li>
+																<li>하지만 HTTP Response Status Code 500번 에러가 계속 발생!</li>
 															</ul>
+
+
+
+										      	</div>
+									         </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingEight">
+									        <h4 class="panel-title">
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+																Networking 문제 해결!
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseEight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingEight">
+									         <div class="panel-body">
+									            <div class="row">
+															<ul>
+																<li>Content Type을 application/x-www-form-urlencoded로 변경해 주고 </li>
+																<li>x-www-form-urlencoded은 json의 key:value 와는 다르게 key-value&key=value와 같이 query문으로 body를 작성해야 하기 때문에 </li>
+																<li>query문으로 변환하는 메소드를 만든 후 적용한 후 문제 해결! </li>
+																<li><img src="images/problem/request_query.png" alt="My Image" width="500"></li>
+																<li><img src="images/problem/requestOtherType.png" alt="My Image" width="500"></li>
+
+															</ul>
+
 
 
 										      	</div>
